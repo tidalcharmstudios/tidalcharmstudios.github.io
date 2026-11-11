@@ -10,7 +10,13 @@
     <meta name="googlebot" content="noai, noimageai">
     <meta name="tdm-reservation" content="1">
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts Import: Cinzel, Montserrat, Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Dynamic CSS Relative Path Link -->
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
 </head>
 <body>
 
@@ -19,16 +25,6 @@
 
     <!-- Page Content Injected Here -->
     {{ content }}
-
-    <!-- Zero-Tracking Direct Contact Section -->
-    <section class="contact-section">
-        <h2>Initiate Contact</h2>
-        <p>Direct email connection for inquiries, fine art acquisition, and dialogue.</p>
-        
-        <a href="mailto:tidalcharmstudios@gmail.com?subject=Studio%20Inquiry%20-%20Tidal%20Charm%20Studios&body=Hello%20Megan,%0A%0AI%20am%20reaching%20out%20regarding:" class="contact-button">
-            Send Direct Email
-        </a>
-    </section>
 
     <!-- Custom Fine Art Footer -->
     <footer class="site-footer">
