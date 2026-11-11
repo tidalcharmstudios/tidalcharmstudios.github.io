@@ -1,1 +1,19 @@
+# Site Details
+title: "Tidal Charm Studios"
+tagline: "Where the Psyche's Current Becomes Art"
+url: "https://tidalcharmstudios.github.io"
+baseurl: ""
 
+# Template & Rendering Controls
+# Setting theme to null forces GitHub Pages to use custom layout templates and CSS
+theme: null
+markdown: kramdown
+
+# Build Exclusions (prevents non-public files from compiling into the public build)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .git
+  - .gitignore
+  - README.md
