@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Tidal Charm Studios - Brand Design System & Palette Variables
+   Tidal Charm Studios - Core Viewport & Solid Background Lockdown
    ========================================================================== */
 
 :root {
-    /* Brand Colors */
-    --color-bg: #0d031b;           /* Solid Background */
+    /* Core Background & Palette */
+    --color-bg: #0d031b;           /* Solid Deep Background */
     --color-gold: #c4a35a;         /* Primary Gold Accent & Studio Title */
     --color-slate-blue: #b6d0e2;   /* Soft Slate Blue Accent */
     --color-cyan: #25effb;         /* Bright Cyan Highlight & Interactive Links */
@@ -18,11 +18,10 @@
     --font-editorial: 'Playfair Display', serif;
 }
 
-/* Core Reset & Body Rules */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Force HTML root and Body to fill 100% of the viewport seamlessly */
+html {
+    background-color: var(--color-bg);
+    min-height: 100%;
 }
 
 body {
@@ -31,6 +30,7 @@ body {
     font-family: var(--font-body);
     font-weight: 300;
     line-height: 1.8;
+    min-height: 100vh;
     padding: 30px 15px;
 }
 
