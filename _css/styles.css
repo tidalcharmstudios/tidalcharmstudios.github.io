@@ -1,40 +1,49 @@
 /* ==========================================================================
-   Tidal Charm Studios - Core Viewport & Solid Background Lockdown
+   Tidal Charm Studios - Master Design System & Style Engine
    ========================================================================== */
 
+/* 1. Global Brand Variables */
 :root {
-    /* Core Background & Palette */
-    --color-bg: #0d031b;           /* Solid Deep Background */
-    --color-gold: #c4a35a;         /* Primary Gold Accent & Studio Title */
+    /* Brand Palette */
+    --color-bg: #0d031b;           /* Deep Solid Background */
+    --color-gold: #c4a35a;         /* Primary Gold Title & Accent */
     --color-slate-blue: #b6d0e2;   /* Soft Slate Blue Accent */
-    --color-cyan: #25effb;         /* Bright Cyan Highlight & Interactive Links */
-    --color-navy: #002147;         /* Deep Navy Borders & Element Fills */
-    --color-body-text: #cccccc;    /* Primary Body Text */
-    --color-muted-text: #999999;   /* Subtitle & Disclaimer Text */
+    --color-cyan: #25effb;         /* Bright Cyan Highlight & Active Links */
+    --color-navy: #002147;         /* Deep Navy Borders & Element Frames */
+    --color-body-text: #cccccc;    /* Primary Montserrat Body Text */
+    --color-muted-text: #999999;   /* Subtitles & Legal Disclaimer Text */
 
-    /* Typography Families */
+    /* Brand Typography Stacks */
     --font-title: 'Cinzel', serif;
     --font-body: 'Montserrat', sans-serif;
     --font-editorial: 'Playfair Display', serif;
 }
 
-/* Force HTML root and Body to fill 100% of the viewport seamlessly */
+/* 2. Absolute Viewport & Background Lockdown */
 html {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg) !important;
     min-height: 100%;
 }
 
 body {
-    background-color: var(--color-bg);
+    background-color: var(--color-bg) !important;
     color: var(--color-body-text);
     font-family: var(--font-body);
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.85;
     min-height: 100vh;
     padding: 30px 15px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-/* 1. Header Component */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Global Header Component (Star Compass Emblem & Brand Titles) */
 .site-header {
     text-align: center;
     margin-bottom: 50px;
@@ -68,16 +77,16 @@ body {
 
 .site-tagline {
     font-family: var(--font-body);
-    color: var(--color-slate-blue);
+    color: var(--color-navy);
     font-style: italic;
     font-size: 0.95rem;
     margin-top: 8px;
     letter-spacing: 1px;
 }
 
-/* 2. Hero Section - Scaled Center Framing */
+/* 4. Scaled Hero Feature Section */
 .hero-section {
-    max-width: 380px; /* Reduced from 550px for refined central framing */
+    max-width: 380px; /* Constrains hero frame size to match Canva mockups */
     margin: 0 auto 40px auto;
 }
 
@@ -88,22 +97,13 @@ body {
     overflow: hidden;
 }
 
-/* Diptych Vertical Image Grid - Scaled Editorial Proportion */
-.diptych-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    max-width: 400px; /* Reduced from 550px so vertical cards remain compact */
-    margin: 0 auto;
+.placeholder-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
-.diptych-card {
-    border: 1px solid var(--color-navy);
-    aspect-ratio: 2 / 3;
-    overflow: hidden;
-}
-
-/* 3. Philosophy Section & Earth Symbol Divider */
+/* 5. Mid-Header Philosophy Section & Earth Symbol Divider */
 .philosophy-section {
     max-width: 650px;
     margin: 0 auto 70px auto;
@@ -125,7 +125,7 @@ body {
     line-height: 1.85;
 }
 
-/* 4. Editorial Narrative Sections (The Ascent & The Descent) */
+/* 6. Editorial Narrative Sections (The Ascent & The Descent) */
 .section-gold-title {
     font-family: var(--font-title);
     color: var(--color-gold);
@@ -164,25 +164,12 @@ body {
     margin-left: auto;
 }
 
-/* 2. Hero Section - Scaled Center Framing */
-.hero-section {
-    max-width: 380px; /* Reduced from 550px for refined central framing */
-    margin: 0 auto 40px auto;
-}
-
-.hero-image-wrapper {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border: 1px solid var(--color-navy);
-    overflow: hidden;
-}
-
-/* Diptych Vertical Image Grid - Scaled Editorial Proportion */
+/* 7. Diptych Vertical Image Grid */
 .diptych-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-    max-width: 400px; /* Reduced from 550px so vertical cards remain compact */
+    max-width: 400px; /* Constrains dual vertical cards to elegant editorial proportions */
     margin: 0 auto;
 }
 
@@ -190,9 +177,14 @@ body {
     border: 1px solid var(--color-navy);
     aspect-ratio: 2 / 3;
     overflow: hidden;
+    transition: border-color 0.3s ease;
 }
 
-/* 5. Fine Art Quote (Playfair Display) */
+.diptych-card:hover {
+    border-color: var(--color-gold);
+}
+
+/* 8. Fine Art Quote (Playfair Display) */
 .quote-block {
     max-width: 550px;
     margin: 50px auto 0 auto;
@@ -214,7 +206,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* 6. Direct Contact Portal */
+/* 9. Direct Contact Portal Section */
 .portal-section {
     max-width: 600px;
     margin: 90px auto 40px auto;
@@ -256,11 +248,11 @@ body {
     color: var(--color-gold);
 }
 
-/* 7. Custom Fine Art Footer */
+/* 10. Fine Art Footer (Earth Cross Symbol & Legal Declarations) */
 .site-footer {
     text-align: center;
     padding: 60px 15px 30px 15px;
-    background-color: var(--color-bg);
+    background-color: var(--color-bg) !important;
 }
 
 .footer-symbol {
