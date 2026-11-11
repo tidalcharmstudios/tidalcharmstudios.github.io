@@ -1,7 +1,24 @@
 /* ==========================================================================
-   Tidal Charm Studios - Core Palette & Editorial CSS
+   Tidal Charm Studios - Brand Design System & Palette Variables
    ========================================================================== */
 
+:root {
+    /* Brand Colors */
+    --color-bg: #0d031b;           /* Solid Background */
+    --color-gold: #c4a35a;         /* Primary Gold Accent & Studio Title */
+    --color-slate-blue: #b6d0e2;   /* Soft Slate Blue Accent */
+    --color-cyan: #25effb;         /* Bright Cyan Highlight & Interactive Links */
+    --color-navy: #002147;         /* Deep Navy Borders & Element Fills */
+    --color-body-text: #cccccc;    /* Primary Body Text */
+    --color-muted-text: #999999;   /* Subtitle & Disclaimer Text */
+
+    /* Typography Families */
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-editorial: 'Playfair Display', serif;
+}
+
+/* Core Reset & Body Rules */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,14 +26,15 @@
 }
 
 body {
-    background-color: #0d031b;
-    color: #b6d0e2;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.7;
+    background-color: var(--color-bg);
+    color: var(--color-body-text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.8;
     padding: 30px 15px;
 }
 
-/* Header Component Styling */
+/* 1. Header Component */
 .site-header {
     text-align: center;
     margin-bottom: 50px;
@@ -31,30 +49,33 @@ body {
 }
 
 .site-title {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
+    font-family: var(--font-title);
+    font-size: 2.1rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .site-title a {
-    color: #c4a35a;
+    color: var(--color-gold);
     text-decoration: none;
     transition: color 0.25s ease;
 }
 
 .site-title a:hover {
-    color: #95dfed;
+    color: var(--color-cyan);
 }
 
 .site-tagline {
-    color: #b6d0e2;
+    font-family: var(--font-body);
+    color: var(--color-slate-blue);
     font-style: italic;
     font-size: 0.95rem;
-    margin-top: 6px;
-    letter-spacing: 0.5px;
+    margin-top: 8px;
+    letter-spacing: 1px;
 }
 
-/* Hero Section Rules */
+/* 2. Hero Section */
 .hero-section {
     max-width: 550px;
     margin: 0 auto 40px auto;
@@ -63,7 +84,7 @@ body {
 .hero-image-wrapper {
     width: 100%;
     aspect-ratio: 1 / 1;
-    border: 1px solid #113e72;
+    border: 1px solid var(--color-navy);
     overflow: hidden;
 }
 
@@ -73,7 +94,7 @@ body {
     display: block;
 }
 
-/* Philosophy Section & Earth Symbol Divider */
+/* 3. Philosophy Section & Earth Symbol Divider */
 .philosophy-section {
     max-width: 650px;
     margin: 0 auto 70px auto;
@@ -89,16 +110,18 @@ body {
 }
 
 .philosophy-text {
-    color: #b6d0e2;
+    font-family: var(--font-body);
+    color: var(--color-body-text);
     font-size: 1.05rem;
-    line-height: 1.8;
+    line-height: 1.85;
 }
 
-/* Editorial Narrative Sections (The Ascent & The Descent) */
+/* 4. Editorial Narrative Sections (The Ascent & The Descent) */
 .section-gold-title {
-    color: #c4a35a;
-    font-size: 1.1rem;
-    letter-spacing: 3.5px;
+    font-family: var(--font-title);
+    color: var(--color-gold);
+    font-size: 1.2rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: 400;
     margin-bottom: 20px;
@@ -110,9 +133,10 @@ body {
 }
 
 .narrative-text p {
-    color: #b6d0e2;
+    font-family: var(--font-body);
+    color: var(--color-body-text);
     font-size: 0.98rem;
-    line-height: 1.75;
+    line-height: 1.8;
     max-width: 380px;
 }
 
@@ -141,32 +165,34 @@ body {
 }
 
 .diptych-card {
-    border: 1px solid #113e72;
+    border: 1px solid var(--color-navy);
     aspect-ratio: 2 / 3;
     overflow: hidden;
 }
 
-/* Fine Art Quote Styling */
+/* 5. Fine Art Quote (Playfair Display) */
 .quote-block {
     max-width: 550px;
     margin: 50px auto 0 auto;
     text-align: center;
-    color: #95dfed;
-    font-family: Georgia, "Playfair Display", serif;
+    color: var(--color-cyan);
+    font-family: var(--font-editorial);
     font-style: italic;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.75;
 }
 
 .quote-block cite {
     display: block;
-    margin-top: 10px;
+    margin-top: 12px;
     font-style: normal;
+    font-family: var(--font-body);
     font-size: 0.9rem;
-    color: #b6d0e2;
+    color: var(--color-slate-blue);
+    letter-spacing: 1px;
 }
 
-/* Direct Contact Portal */
+/* 6. Direct Contact Portal */
 .portal-section {
     max-width: 600px;
     margin: 90px auto 40px auto;
@@ -174,7 +200,8 @@ body {
 }
 
 .stewardship-notice {
-    color: #b6d0e2;
+    font-family: var(--font-body);
+    color: var(--color-muted-text);
     font-size: 0.95rem;
     line-height: 1.7;
     margin-bottom: 25px;
@@ -193,7 +220,8 @@ body {
 }
 
 .contact-link {
-    color: #95dfed;
+    font-family: var(--font-body);
+    color: var(--color-cyan);
     text-decoration: underline;
     font-size: 0.95rem;
     letter-spacing: 1px;
@@ -203,14 +231,14 @@ body {
 }
 
 .contact-link:hover {
-    color: #c4a35a;
+    color: var(--color-gold);
 }
 
-/* Custom Fine Art Footer */
+/* 7. Custom Fine Art Footer */
 .site-footer {
     text-align: center;
     padding: 60px 15px 30px 15px;
-    background-color: #0d031b;
+    background-color: var(--color-bg);
 }
 
 .footer-symbol {
@@ -222,7 +250,8 @@ body {
 }
 
 .footer-motto {
-    color: #c4a35a;
+    font-family: var(--font-title);
+    color: var(--color-gold);
     letter-spacing: 3px;
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -232,12 +261,14 @@ body {
 .footer-credits {
     margin-bottom: 22px;
     line-height: 1.8;
-    color: #b6d0e2;
+    color: var(--color-slate-blue);
+    font-family: var(--font-body);
     font-size: 0.9rem;
 }
 
 .footer-statement {
-    color: #c4a35a;
+    font-family: var(--font-title);
+    color: var(--color-gold);
     letter-spacing: 2px;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -249,7 +280,8 @@ body {
 }
 
 .footer-rights a {
-    color: #b6d0e2;
+    font-family: var(--font-body);
+    color: var(--color-slate-blue);
     text-decoration: underline;
     letter-spacing: 2px;
     font-size: 0.8rem;
@@ -259,9 +291,10 @@ body {
 .footer-disclaimer {
     max-width: 650px;
     margin: 0 auto;
+    font-family: var(--font-body);
     font-size: 0.75rem;
     line-height: 1.75;
-    color: #888888;
+    color: var(--color-muted-text);
     text-align: center;
 }
 
