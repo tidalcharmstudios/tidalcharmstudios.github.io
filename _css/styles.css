@@ -32,7 +32,15 @@ body {
     font-size: 2.2rem;
     letter-spacing: 1.5px;
 }
+.site-title a {
+    color: #c4a35a;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
 
+.site-title a:hover {
+    color: #95dfed;
+}
 .site-tagline {
     color: #b6d0e2;
     font-style: italic;
