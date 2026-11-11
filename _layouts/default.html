@@ -28,7 +28,7 @@
         <p class="site-tagline">{{ site.tagline }}</p>
     </header>
 
-    <!-- Page Specific Content Injected Here -->
+    <!-- Page Content Injected Here -->
     {{ content }}
 
     <!-- Zero-Tracking Direct Contact Section -->
@@ -41,17 +41,31 @@
         </a>
     </section>
 
-    <!-- Global Footer -->
+    <!-- Custom Fine Art Footer -->
     <footer class="site-footer">
-        <div class="footer-placeholder">
-            <svg viewBox="0 0 800 100" preserveAspectRatio="none" class="placeholder-svg">
-                <rect width="100%" height="100%" fill="#113e72"/>
-                <text x="50%" y="50%" fill="#c4a35a" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16">
-                    Footer Accent Graphic Placeholder (SVG)
-                </text>
+        <!-- Vector Earth Symbol (Circle with Cross) -->
+        <div class="footer-symbol">
+            <svg viewBox="0 0 100 100" width="44" height="44" stroke="#b6d0e2" stroke-width="3" fill="none">
+                <circle cx="50" cy="50" r="42" />
+                <line x1="50" y1="8" x2="50" y2="92" />
+                <line x1="8" y1="50" x2="92" y2="50" />
             </svg>
         </div>
-        <p class="copyright">&copy; 2026 {{ site.title }}. All Rights Reserved. Synthetic-Free Imagery.</p>
+
+        <p class="footer-motto">AUTHENTICITY IS THE ONLY SYNCHRONICITY.</p>
+
+        <div class="footer-credits">
+            <p>All captures, designs, and digital structures brought to life by Megan Simmons.</p>
+            <p>Principal Photographer Lead Designer Steward of the Current.</p>
+        </div>
+
+        <p class="footer-statement">&copy; 2026 TIDAL CHARM STUDIOS. CAPTURED WITH INTENTION.</p>
+
+        <p class="footer-rights"><a href="#">ALL RIGHTS RESERVED.</a></p>
+
+        <p class="footer-disclaimer">
+            Copyright &copy; 2026 Tidal Charm Studios | Where the Psyche's Current Becomes Art. All content is the exclusive intellectual property of Tidal Charm Studios. Unauthorized use, including reposting to social platforms or the application of text and filters, is strictly forbidden without written consent. We remain committed to the legacy and purity of the manual image. No consent is granted for AI training, machine learning, web scraping, or automated data mining. Any unauthorized exploitation is subject to legal action. The purity and intent of the manual image are strictly protected.
+        </p>
     </footer>
 
 </body>
