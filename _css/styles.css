@@ -1,4 +1,7 @@
-/* Core Reset & Dark Palette Base */
+/* ==========================================================================
+   Tidal Charm Studios - Core Palette & Editorial CSS
+   ========================================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,31 +10,32 @@
 
 body {
     background-color: #0d031b;
-    color: #e0e0e0;
+    color: #b6d0e2;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
+    line-height: 1.7;
+    padding: 30px 15px;
 }
 
-/* Header Component Rules */
+/* Header Component Styling */
 .site-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-.header-placeholder {
-    width: 100%;
-    max-height: 200px;
-    margin-bottom: 20px;
-    border: 1px solid #c4a35a;
-    overflow: hidden;
+.header-emblem {
+    margin-bottom: 15px;
+}
+
+.header-emblem svg {
+    display: inline-block;
 }
 
 .site-title {
-    color: #c4a35a;
-    font-size: 2.2rem;
-    letter-spacing: 1.5px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
+
 .site-title a {
     color: #c4a35a;
     text-decoration: none;
@@ -41,49 +45,26 @@ body {
 .site-title a:hover {
     color: #95dfed;
 }
+
 .site-tagline {
     color: #b6d0e2;
     font-style: italic;
+    font-size: 0.95rem;
     margin-top: 6px;
+    letter-spacing: 0.5px;
 }
 
-/* Responsive CSS Grid System */
-.gallery-container {
-    max-width: 1200px;
-    margin: 0 auto 50px auto;
+/* Hero Section Rules */
+.hero-section {
+    max-width: 550px;
+    margin: 0 auto 40px auto;
 }
 
-.section-title {
-    color: #95dfed;
-    border-bottom: 1px solid #113e72;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.gallery-card {
-    background-color: #140826;
-    border: 1px solid #113e72;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.gallery-card:hover {
-    transform: translateY(-4px);
-    border-color: #c4a35a;
-}
-
-.image-placeholder {
+.hero-image-wrapper {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    background-color: #1d2636;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #113e72;
+    overflow: hidden;
 }
 
 .placeholder-svg {
@@ -92,68 +73,144 @@ body {
     display: block;
 }
 
-.card-caption {
-    padding: 15px;
-}
-
-.card-caption h3 {
-    color: #95dfed;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.card-caption p {
-    color: #b6d0e2;
-    font-size: 0.9rem;
-}
-
-/* Zero-Tracking Contact Layout */
-.contact-section {
+/* Philosophy Section & Earth Symbol Divider */
+.philosophy-section {
+    max-width: 650px;
+    margin: 0 auto 70px auto;
     text-align: center;
-    padding: 40px 20px;
-    background-color: #140826;
-    border: 1px solid #113e72;
-    max-width: 600px;
-    margin: 0 auto 50px auto;
-    border-radius: 4px;
 }
 
-.contact-section h2 {
-    color: #c4a35a;
-    margin-bottom: 10px;
+.section-divider-symbol {
+    margin-bottom: 25px;
 }
 
-.contact-section p {
-    color: #b6d0e2;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-}
-
-.contact-button {
+.section-divider-symbol svg {
     display: inline-block;
-    background-color: transparent;
+}
+
+.philosophy-text {
+    color: #b6d0e2;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Editorial Narrative Sections (The Ascent & The Descent) */
+.section-gold-title {
+    color: #c4a35a;
+    font-size: 1.1rem;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.narrative-block {
+    max-width: 650px;
+    margin: 0 auto 70px auto;
+}
+
+.narrative-text p {
+    color: #b6d0e2;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    max-width: 380px;
+}
+
+.narrative-text.left-aligned {
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.narrative-text.right-aligned {
+    margin-left: auto;
+    text-align: right;
+    margin-bottom: 35px;
+}
+
+.narrative-text.right-aligned p {
+    margin-left: auto;
+}
+
+/* Diptych Vertical Image Grid */
+.diptych-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.diptych-card {
+    border: 1px solid #113e72;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+}
+
+/* Fine Art Quote Styling */
+.quote-block {
+    max-width: 550px;
+    margin: 50px auto 0 auto;
+    text-align: center;
     color: #95dfed;
-    border: 2px solid #95dfed;
-    padding: 12px 28px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 2px;
+    font-family: Georgia, "Playfair Display", serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.quote-block cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #b6d0e2;
+}
+
+/* Direct Contact Portal */
+.portal-section {
+    max-width: 600px;
+    margin: 90px auto 40px auto;
+    text-align: center;
+}
+
+.stewardship-notice {
+    color: #b6d0e2;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.moon-symbol {
+    margin-bottom: 25px;
+}
+
+.moon-symbol svg {
+    display: inline-block;
+}
+
+.direct-contact-links {
+    margin-top: 15px;
+}
+
+.contact-link {
+    color: #95dfed;
+    text-decoration: underline;
+    font-size: 0.95rem;
     letter-spacing: 1px;
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: color 0.2s ease;
 }
 
-.contact-button:hover {
-    background-color: #95dfed;
-    color: #0d031b;
-    border-color: #95dfed;
+.contact-link:hover {
+    color: #c4a35a;
 }
 
-/* Custom Fine Art Footer Styling */
+/* Custom Fine Art Footer */
 .site-footer {
     text-align: center;
-    padding: 60px 20px 40px 20px;
+    padding: 60px 15px 30px 15px;
     background-color: #0d031b;
-    color: #b6d0e2;
 }
 
 .footer-symbol {
@@ -167,43 +224,53 @@ body {
 .footer-motto {
     color: #c4a35a;
     letter-spacing: 3px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .footer-credits {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     line-height: 1.8;
     color: #b6d0e2;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .footer-statement {
     color: #c4a35a;
     letter-spacing: 2px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .footer-rights {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .footer-rights a {
     color: #b6d0e2;
     text-decoration: underline;
     letter-spacing: 2px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
 }
 
 .footer-disclaimer {
-    max-width: 850px;
+    max-width: 650px;
     margin: 0 auto;
-    font-size: 0.78rem;
-    line-height: 1.7;
+    font-size: 0.75rem;
+    line-height: 1.75;
     color: #888888;
     text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .narrative-text p {
+        max-width: 100%;
+    }
+    .diptych-grid {
+        grid-template-columns: 1fr;
+    }
 }
