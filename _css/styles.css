@@ -140,20 +140,62 @@ body {
     border-color: #95dfed;
 }
 
-/* Footer Element Rules */
+/* Custom Fine Art Footer Styling */
 .site-footer {
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
+    padding: 60px 20px 40px 20px;
+    background-color: #0d031b;
+    color: #b6d0e2;
 }
 
-.footer-placeholder {
-    width: 100%;
-    max-height: 80px;
+.footer-symbol {
+    margin-bottom: 25px;
+}
+
+.footer-symbol svg {
+    display: inline-block;
+}
+
+.footer-motto {
+    color: #c4a35a;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-credits {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #b6d0e2;
+    font-size: 0.95rem;
+}
+
+.footer-statement {
+    color: #c4a35a;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
     margin-bottom: 15px;
 }
 
-.copyright {
-    color: #888888;
+.footer-rights {
+    margin-bottom: 30px;
+}
+
+.footer-rights a {
+    color: #b6d0e2;
+    text-decoration: underline;
+    letter-spacing: 2px;
     font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.footer-disclaimer {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 0.78rem;
+    line-height: 1.7;
+    color: #888888;
+    text-align: center;
 }
