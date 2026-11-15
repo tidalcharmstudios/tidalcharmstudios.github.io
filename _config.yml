@@ -1,0 +1,16 @@
+# Tidal Charm Studios - GitHub Pages / Jekyll Configuration
+title: "Tidal Charm Studios"
+description: "Where the Psyche's Current Becomes Art"
+url: "https://tidalcharmstudios.com"
+baseurl: ""
+
+# Clean URL structure (serves /the-steward instead of /the-steward.html)
+permalink: pretty
+
+# Explicitly exclude local logs, backups, and config files from live public build
+exclude:
+  - .gitignore
+  - _local-backups
+  - ps-session-*.txt
+  - notes-*.txt
+  - README.md
