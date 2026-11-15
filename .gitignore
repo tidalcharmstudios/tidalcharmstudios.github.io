@@ -1,0 +1,6 @@
+# Private local logs, offline backups & Windows system files (never upload to GitHub)
+_local-backups/
+ps-session-*.txt
+notes-*.txt
+Thumbs.db
+.DS_Store
