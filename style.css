@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Tidal Charm Studios - Master Stylesheet
+   "Where the Psyche's Current Becomes Art."
+   ========================================================================== */
+
+:root {
+  /* Core Studio Palette */
+  --bg-abyss: #0D031B;
+  --navy-depth: #002147;
+  --gold-sigil: #C4A35A;
+  --cyan-current: #95DFED;
+  --mist-blue: #B6D0E2;
+
+  /* Accent & Neutral Scale */
+  --electric-arc: #25EFFB;
+  --silver-light: #CCCCCC;
+  --slate-muted: #999999;
+  --charcoal-shadow: #333333;
+
+  /* Brand Typography */
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-editorial: 'Playfair Display', Georgia, serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Global Reset & Box Model Stability */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-abyss);
+  color: var(--mist-blue);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-abyss);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+/* Sanctuary Container */
+.sanctuary-frame {
+  width: 100%;
+  max-width: 760px;
+  border: 4px solid var(--navy-depth);
+  background-color: rgba(13, 3, 27, 0.94);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+}
+
+/* Monogram & Primary Headings */
+.monogram {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  color: var(--cyan-current);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--gold-sigil);
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.9);
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  color: var(--mist-blue);
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+}
+
+/* Divider Rule */
+.current-divider {
+  width: 90px;
+  height: 2px;
+  border: none;
+  background-color: var(--navy-depth);
+  margin: 0 auto 2rem auto;
+}
+
+/* Manifesto / Status Copy */
+.manifest-copy {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 300;
+  color: var(--silver-light);
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.purist-declaration {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-sigil);
+  margin-top: 2rem;
+  margin-bottom: 2.25rem;
+}
+
+/* Contact & Footer Threshold */
+.threshold-contact {
+  border-top: 1px solid var(--charcoal-shadow);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--slate-muted);
+}
+
+.threshold-contact a {
+  color: var(--cyan-current);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.threshold-contact a:hover,
+.threshold-contact a:focus {
+  color: var(--electric-arc);
+  border-bottom-color: var(--electric-arc);
+}
+
+/* Mobile Viewport Refinement */
+@media (max-width: 540px) {
+  .sanctuary-frame {
+    padding: 2.5rem 1.35rem;
+  }
+}
