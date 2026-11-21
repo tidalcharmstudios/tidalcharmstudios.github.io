@@ -1,153 +1,180 @@
 /* ==========================================================================
-   Tidal Charm Studios - Master Stylesheet
-   "Where the Psyche's Current Becomes Art."
+   TIDAL CHARM STUDIOS — MASTER STYLESHEET
+   "Where the Psyche's Current Becomes Art"
    ========================================================================== */
 
+/* 1. Locked 9-Color Brand Palette */
 :root {
-  /* Core Studio Palette */
-  --bg-abyss: #0D031B;
-  --navy-depth: #002147;
-  --gold-sigil: #C4A35A;
-  --cyan-current: #95DFED;
-  --mist-blue: #B6D0E2;
-
-  /* Accent & Neutral Scale */
-  --electric-arc: #25EFFB;
-  --silver-light: #CCCCCC;
-  --slate-muted: #999999;
-  --charcoal-shadow: #333333;
-
-  /* Brand Typography */
-  --font-display: 'Cinzel', Georgia, serif;
-  --font-editorial: 'Playfair Display', Georgia, serif;
-  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-void: #0D031B;          /* Primary deep obsidian-indigo canvas */
+  --navy-horizon: #002147;     /* Full-bleed horizon rule & structural depth */
+  --gold-primary: #C4A35A;     /* Studio title & primary archetypal headings */
+  --aqua-luminous: #95DFED;    /* Subheadings & secondary highlights */
+  --ice-mist: #B6D0E2;         /* Primary editorial body copy & italic tagline */
+  --cyan-pulse: #25EFFB;       /* Reserved subtle interactive accent */
+  --silver-light: #CCCCCC;     /* Secondary light neutral */
+  --slate-mid: #999999;        /* Muted metadata & inquiry label */
+  --charcoal-subdued: #333333; /* Colophon & quiet boundary notices */
 }
 
-/* Global Reset & Box Model Stability */
+/* 2. Box-Model Reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
+/* 3. Base Document & Full-Height Viewport Layout */
 html {
-  background-color: var(--bg-abyss);
-  color: var(--mist-blue);
-  font-family: var(--font-body);
+  background-color: var(--bg-void);
+  color: var(--ice-mist);
   font-size: 16px;
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
+  margin: 0;
   min-height: 100vh;
-  background-color: var(--bg-abyss);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 1.5rem;
-}
-
-/* Sanctuary Container */
-.sanctuary-frame {
-  width: 100%;
-  max-width: 760px;
-  border: 4px solid var(--navy-depth);
-  background-color: rgba(13, 3, 27, 0.94);
-  padding: 3.5rem 2.5rem;
-  text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
-}
-
-/* Monogram & Primary Headings */
-.monogram {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.35em;
-  color: var(--cyan-current);
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-}
-
-h1 {
-  font-family: var(--font-display);
-  font-size: clamp(1.85rem, 4vw, 2.75rem);
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  color: var(--gold-sigil);
-  text-transform: uppercase;
-  line-height: 1.3;
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.9);
-  margin-bottom: 1rem;
-}
-
-.tagline {
-  font-family: var(--font-editorial);
-  font-style: italic;
-  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
-  color: var(--mist-blue);
-  letter-spacing: 0.04em;
-  margin-bottom: 2rem;
-}
-
-/* Divider Rule */
-.current-divider {
-  width: 90px;
-  height: 2px;
-  border: none;
-  background-color: var(--navy-depth);
-  margin: 0 auto 2rem auto;
-}
-
-/* Manifesto / Status Copy */
-.manifest-copy {
-  font-family: var(--font-body);
-  font-size: 0.98rem;
+  background-color: var(--bg-void);
+  color: var(--ice-mist);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  color: var(--silver-light);
-  max-width: 600px;
-  margin: 0 auto 1.5rem auto;
+  line-height: 1.9;
+  letter-spacing: 0.13em;
 }
 
-.purist-declaration {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
+/* 4. Studio Masthead (Title & Tagline) */
+.studio-masthead {
+  width: 100%;
+  padding: 5rem 1.5rem 3.25rem;
+  text-align: center;
+}
+
+.studio-title {
+  margin: 0 0 1.25rem;
+  font-family: 'Cinzel', serif;
   font-weight: 400;
-  letter-spacing: 0.08em;
+  font-size: clamp(1.5rem, 3.2vw, 2.35rem);
+  letter-spacing: 0.24em;
+  line-height: 1.3;
   text-transform: uppercase;
-  color: var(--gold-sigil);
-  margin-top: 2rem;
-  margin-bottom: 2.25rem;
+  color: var(--gold-primary);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
-/* Contact & Footer Threshold */
-.threshold-contact {
-  border-top: 1px solid var(--charcoal-shadow);
-  padding-top: 1.5rem;
-  font-size: 0.85rem;
-  color: var(--slate-muted);
+.studio-tagline {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  color: var(--ice-mist);
 }
 
-.threshold-contact a {
-  color: var(--cyan-current);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: color 0.25s ease, border-color 0.25s ease;
+/* 5. Full-Bleed Horizon Rule */
+hr.horizon-rule {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background-color: var(--navy-horizon);
 }
 
-.threshold-contact a:hover,
-.threshold-contact a:focus {
-  color: var(--electric-arc);
-  border-bottom-color: var(--electric-arc);
+/* 6. Centered 60ch Editorial Column */
+.editorial-column {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
 }
 
-/* Mobile Viewport Refinement */
-@media (max-width: 540px) {
-  .sanctuary-frame {
-    padding: 2.5rem 1.35rem;
-  }
+.threshold-heading-group {
+  margin: 0 0 4rem;
+}
+
+.threshold-heading {
+  margin: 0 0 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  letter-spacing: 0.20em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.threshold-subheading {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+  letter-spacing: 0.22em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+.editorial-column > p {
+  margin: 0 0 2.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  letter-spacing: 0.13em;
+  color: var(--ice-mist);
+}
+
+/* 7. Direct Inquiries Block */
+.inquiry-block {
+  margin-top: 5.5rem;
+}
+
+.inquiry-label {
+  margin: 0 0 0.35rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  color: var(--slate-mid);
+}
+
+.inquiry-address {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+  color: var(--slate-mid);
+}
+
+.obfuscated-email {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35em;
+}
+
+/* 8. Subdued Colophon */
+.studio-colophon {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 3rem 1.5rem 2.75rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.85;
+  letter-spacing: 0.14em;
+  color: var(--charcoal-subdued);
+}
+
+.studio-colophon p {
+  margin: 0;
 }
