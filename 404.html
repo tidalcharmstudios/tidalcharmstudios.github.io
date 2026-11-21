@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Uncharted Current | Tidal Charm Studios</title>
+
+  <!-- Prevents search indexing of error URLs and enforces AI/TDM non-consent -->
+  <meta name="robots" content="noindex, nofollow, noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+
+  <!-- Tidal Charm Studios Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Embedded CSS guarantees styling loads at any subfolder URL depth -->
+  <style>
+    :root {
+      --bg-void: #0D031B;
+      --surface-navy: #002147;
+      --accent-gold: #C4A35A;
+      --accent-cyan: #B6D0E2;
+      --glow-cyan: #95DFED;
+      --text-primary: #CCCCCC;
+      --text-muted: #999999;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-void);
+      color: var(--text-primary);
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+
+    .boundary-frame {
+      max-width: 600px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0, 33, 71, 0.35) 0%, rgba(13, 3, 27, 0.92) 100%);
+      border: 1px solid rgba(196, 163, 90, 0.35);
+      padding: 3rem 2.25rem;
+      text-align: center;
+    }
+
+    .status-code {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.28em;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      font-weight: 500;
+      color: var(--accent-cyan);
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .return-link {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--glow-cyan);
+      text-decoration: none;
+      border: 1px solid rgba(149, 223, 237, 0.45);
+      padding: 0.85rem 1.75rem;
+      transition: border-color 0.25s ease, color 0.25s ease;
+    }
+
+    .return-link:hover,
+    .return-link:focus-visible {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+  </style>
+</head>
+<body>
+  <main class="boundary-frame">
+    <div class="status-code">Boundary 404 &bull; Uncharted Current</div>
+    <h1>This Passage Has Not Surfaced</h1>
+    <p>The coordinate you requested does not exist or remains sealed while the sanctuary is under construction.</p>
+    <!-- Root-relative '/' always points back to the domain root from any depth -->
+    <a class="return-link" href="/">Return to the Threshold</a>
+  </main>
+</body>
+</html>
