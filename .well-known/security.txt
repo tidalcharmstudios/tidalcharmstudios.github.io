@@ -1,0 +1,7 @@
+# RFC 9116 Security Disclosure Policy — Tidal Charm Studios
+# Tells legitimate security researchers how to report technical vulnerabilities privately
+
+Contact: mailto:tidalcharmstudios@gmail.com
+Expires: 2027-11-19T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://tidalcharmstudios.com/.well-known/security.txt
