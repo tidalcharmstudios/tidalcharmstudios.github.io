@@ -4,3 +4,5 @@ ps-session-*.txt
 notes-*.txt
 Thumbs.db
 .DS_Store
+# Local Windows PowerShell build and deployment scripts
+*.ps1
